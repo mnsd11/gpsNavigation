@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     let locationManager = CLLocationManager ()
     
@@ -40,11 +40,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 }
 
-//extension ViewController: CLLocationManagerDelegate {
-  //  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //    if let lastLocation = locations.last {
-      //      print(lastLocation.coordinate.latitude, lastLocation.coordinate.longitude)
-//        }
-  //  }
-//}
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let lastLocation = locations.last {
+            print(lastLocation.coordinate.latitude, lastLocation.coordinate.longitude)
+        }
+    }
+}
  
