@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager ()
     
     var ref: DatabaseReference!
-        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database().reference()
+        ref=Database.database(url: "https://gpsnavigation2-1ce6d-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+        
+        //Database.database().reference()
         
         // Do any additional setup after loading the view.
         startLocationManager()

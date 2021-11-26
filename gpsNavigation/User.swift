@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-struct User {
+struct User {////
     
     let latitude: Double
     let longitude: Double
