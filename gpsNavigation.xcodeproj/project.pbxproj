@@ -16,7 +16,6 @@
 		49AC216C27397B980012725A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AC216B27397B980012725A /* Assets.xcassets */; };
 		49AC216F27397B980012725A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC216D27397B980012725A /* LaunchScreen.storyboard */; };
 		49DA0F2F274404E60031F813 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA0F2E274404E60031F813 /* Task.swift */; };
-		49DA0F31274406F20031F813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA0F30274406F20031F813 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		49AC216E27397B980012725A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AC217027397B980012725A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49DA0F2E274404E60031F813 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		49DA0F30274406F20031F813 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3A698389CC7707A6BAE3CC1 /* Pods-gpsNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gpsNavigation.release.xcconfig"; path = "Target Support Files/Pods-gpsNavigation/Pods-gpsNavigation.release.xcconfig"; sourceTree = "<group>"; };
 		DF83D332ECFAF063523FAC72 /* Pods_gpsNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gpsNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,7 +80,6 @@
 				49DA0F2E274404E60031F813 /* Task.swift */,
 				49AC216427397B970012725A /* SceneDelegate.swift */,
 				49AC216627397B970012725A /* ViewController.swift */,
-				49DA0F30274406F20031F813 /* User.swift */,
 				49AC216827397B970012725A /* Main.storyboard */,
 				49AC216B27397B980012725A /* Assets.xcassets */,
 				49AC216D27397B980012725A /* LaunchScreen.storyboard */,
@@ -146,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 49AC215627397B970012725A;
+			packageReferences = (
+				49D3E741275DCF0A003F2F1C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 49AC216027397B970012725A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,7 +219,6 @@
 				49DA0F2F274404E60031F813 /* Task.swift in Sources */,
 				49AC216727397B970012725A /* ViewController.swift in Sources */,
 				49AC216327397B970012725A /* AppDelegate.swift in Sources */,
-				49DA0F31274406F20031F813 /* User.swift in Sources */,
 				49AC216527397B970012725A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +447,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49D3E741275DCF0A003F2F1C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 49AC215727397B970012725A /* Project object */;
 }
